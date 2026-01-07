@@ -14,11 +14,11 @@ const app = express();
 mongoose.connect(DB_ADDRESS);
 
 // Только для локальных тестов. Не используйте это в продакшене
-const cors = require('cors');
 app.use(cors({
     origin: 'http://klimov.project.nomorepartiessbs.ru', // фронт
     methods: ['GET','POST','PUT','DELETE'],
-    credentials: true
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
 }))
 app.options('*', cors());
 app.use(express.json());
