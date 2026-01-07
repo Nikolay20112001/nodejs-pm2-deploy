@@ -139,6 +139,6 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api('http://api.klimov.project.nomorepartiessbs.ru');
+  const api = new Api('https://api.klimov.project.nomorepartiessbs.ru');
 
   export default api;
